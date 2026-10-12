@@ -1,0 +1,10 @@
+cat << 'EOF' > checklist
+CS631 Midterm Checklist - ls(1)
+[X] Multi-file structure (ls.c, cmp.c, print.c, ls.h, print.h)
+[X] Makefile compiles cleanly with -Wall -Wextra -Werror -pedantic
+[X] README with testing section included
+[X] Basic listing
+[X] Option -a
+[X] Option -l
+[X] Exported git log to LOG file
+EOF

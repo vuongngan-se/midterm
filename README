@@ -1,0 +1,17 @@
+cat << 'EOF' > README
+# CS631 Midterm: ls(1) Implementation
+
+## Overview
+Cài đặt lệnh ls(1) sử dụng các API hệ thống UNIX/POSIX.
+Chương trình hỗ trợ các cờ -a, -l và sắp xếp thứ tự bảng chữ cái.
+
+## Compilation
+Chạy lệnh 'make' để biên dịch.
+
+## Testing Strategy
+1. So sánh đầu ra với /bin/ls của hệ thống:
+   ./ls > my.out && /bin/ls -1 > orig.out && diff -u my.out orig.out
+   ./ls -a > my.out && /bin/ls -1a > orig.out && diff -u my.out orig.out
+2. Kiểm tra bộ nhớ bằng valgrind để đảm bảo không rò rỉ:
+   valgrind --leak-check=full ./ls -la
+EOF
